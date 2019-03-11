@@ -3,3 +3,18 @@
 */
 
 /* Your Awesome Styles */
+
+/* Gallery Styling */
+
+.lg-backdrop.in  {
+  opacity: 0.9;
+}
+
+.lg-toolbar {
+  background-color: #0cf;
+  opacity: .6
+}
+
+.lg-toolbar .lg-icon, #lg-counter  {
+  color: #333;
+}
