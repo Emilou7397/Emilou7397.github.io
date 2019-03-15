@@ -29,35 +29,53 @@
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="/">Homepage</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/portfolio.html">Portfolio</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="logo">
+            <img src="http://www.placehold.it/200x100" alt="">
+        </div>
+        <div class="links">
+            <a href="index.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
 
-    <h1>Contact</h1>
+    <article>
 
-    <form action="https://formspree.io/pmanikoth@ewu.edu" method="POST">
-       
+        <form action="https://formspree.io/pmanikoth@ewu.edu" method="POST">
+    
+            <h1>Contact</h1>
+            
         <!-- Visible -->
         <label for="name">Name</label>
         <input type="text" name="name">
         
         <label for="_replyto">Email</label>
         <input type="email" name="_replyto">
-       
+        
         <label for="comments">Comments</label>
         <textarea name="comments" id="" cols="30" rows="10"></textarea>
-
+        
         <input type="submit" value="Send">
-
+        
         <!-- Hidden -->
         <input type="hidden" name="_next" value="/"/>
+        
+        </form>
+        
+    </article>
 
-    </form>
+    <footer>
+	
+        <p>&copy; Copyright 1997 - <span class="year">YEAR</span></p>
+        <div class="links">
+            <a href="">Email</a>
+            <a href="">CodePen</a>
+            <a href="">Github</a>
+            <a href="">Instagram</a>
+        </div>
+        
+    </footer>
 
     <!-- jQuery Library via CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
