@@ -29,28 +29,18 @@
 </head>
 
 <body>
-    
+
     <header>
-        <div class="logo">
-            <img src="http://www.placehold.it/200x100" alt="">
-        </div>
-        <div class="links">
-            <a href="index.html">Portfolio</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <div class='logo'>
+            <img src="http://www.placehold.it/500x300" alt="">
         </div>
     </header>
-
-    <article>
-        <h1>Portfolio</h1>
-    </article>
 
     <main>
 
         <div id="gallery-1">
-    
             <a href="https://picsum.photos/800/600?image=100">
-                <img src="https://picsum.photos/300/300?image=100" alt="">
+                <img src="https://picsum.photos/640/300?image=100" alt="">
             </a>
     
             <a href="https://picsum.photos/800/600?image=100">
@@ -70,7 +60,7 @@
             </a>
     
             <a href="https://picsum.photos/800/600?image=100">
-                <img src="https://picsum.photos/300/300?image=100" alt="">
+                <img src="https://picsum.photos/640/300?image=100" alt="">
             </a>
     
             <a href="https://picsum.photos/800/600?image=100">
@@ -78,25 +68,42 @@
             </a>
     
             <a href="https://picsum.photos/800/600?image=100">
-                <img src="https://picsum.photos/300/300?image=100" alt="">
+                <img src="https://picsum.photos/640/300?image=100" alt="">
             </a>
     
             <a href="https://picsum.photos/800/600?image=100">
                 <img src="https://picsum.photos/300/300?image=100" alt="">
             </a>
-    
         </div>
-    
-        <!-- Lightbox -->
-        <div id="lightbox" class="">
-            <img src="https://picsum.photos/800/600/?random" alt="">
-            <div class="copy">
-                <h1>Work Name</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At vero quis molestiae id vel dicta nesciunt temporibus obcaecati ea culpa aspernatur minus assumenda sapiente nemo dolores odio facilis, provident necessitatibus.</p>
-            </div>
-        </div>
-    
-    </main>
+
+    <article>
+        <h1>About Me</h1>
+    </article>
+
+    <article>
+
+        <h1>Contact Me</h1>
+        
+        <form action="https://formspree.io/pmanikoth@ewu.edu" method="POST">
+            
+        <!-- Visible -->
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        
+        <label for="_replyto">Email</label>
+        <input type="email" name="_replyto">
+        
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="" cols="30" rows="10"></textarea>
+        
+        <input type="submit" value="Send">
+        
+        <!-- Hidden -->
+        <input type="hidden" name="_next" value="/"/>
+        
+        </form>
+    </article>
+</main>
 
     <footer>
 	
