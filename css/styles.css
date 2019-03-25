@@ -13,7 +13,6 @@ body	{
 /* Header Styling */
 
 header	{
-	margin-top: 50px;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -118,16 +117,16 @@ svg	{
 
 @keyframes mtrise	{
 	30%	{
-		bottom: -2vw;
+		bottom: -4vw;
 	}
 	70%	{
-		bottom: -2vw;
+		bottom: -4vw;
 	}
 }
 
 @keyframes sunrise	{
 	100%	{
-		bottom: -5vh;
+		bottom: -10vh;
 	}
 }
 
@@ -151,10 +150,9 @@ svg	{
 
 /* Contact Styling */
 
-article	{
+.contact	{
 	display: flex;
   flex-direction: column;
-	margin-left: 20px;
 	height: 100vh;
 	align-items: center;
 }
@@ -254,6 +252,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object	
   color: #eee;
 }
 
+/* About Styling */
+
+.about > h1	{
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.about	{
+	padding: 5vw;
+	height: 100vh;
+	min-width: 45ch;
+	max-width: 75ch;
+	margin: 0 auto;
+}
+
 /* Footer Styling */
 
 footer	{
@@ -278,7 +291,7 @@ footer > .links > a	{
 	margin: 0 10px;
 }
 
-p	{
+footer > p	{
 	text-align: center;
 	margin: 0 20px;
 }
