@@ -7,16 +7,140 @@
 /* Header Styling */
 
 header	{
-	margin: 50px 20px 0 20px;
+	margin-top: 50px;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	overflow: hidden;
 }
 
-.logo > img	{
-	width: 40vw;
-	min-width: 300px;
+svg	{
+	position: absolute;
+}
+
+#logo	{
+	width: 60vw;
+	left: 20vw;
+	bottom: -120%;
+	animation: sunrise 4s ease-out 2s forwards;
+}
+
+#mt-back	{
+	width: 60vw;
+	right: 0;
+	bottom: -60%;
+	animation: mtrise 14s;
+}
+
+#mt-front	{
+	width: 70vw;
+	left: 0;
+	bottom: -100%;
+	animation: mtrise 14s;
+}
+
+.sig1	{
+	stroke-dasharray: 1490px;
+	stroke-dashoffset: -1490px;
+	animation: siganim 2s linear 6.5s forwards;
+}
+
+.sig2	{
+	stroke-dasharray: 740px;
+	stroke-dashoffset: 740px;
+	animation: siganim 1s linear 8.5s forwards;
+}
+
+.sig3	{
+	stroke-dasharray: 10px;
+	stroke-dashoffset: -10px;
+	animation: siganim 0.1s linear 9.5s forwards;
+}
+
+.sun-bottom	{
+	animation: fadeout 1s linear 10s forwards;
+}
+
+
+/* Colors */
+
+.sun-fill {
+  fill: #ffcc05;
+}
+
+.sun-stroke, .signature {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sun-stroke {
+  stroke: #ffcc05;
+  stroke-width: 8px;
+}
+
+.sun-nib	{
+	opacity: 0;
+	animation: fadein 1s linear 10s forwards;
+}
+
+.signature {
+  stroke: #3d3d3d;
+  stroke-width: 5px;
+}
+
+.blue	{
+	fill:#1495CD;
+}
+
+.purple	{
+	fill:#823C7C;
+}
+
+.pink	{
+	fill:#DB2F5C;
+}
+
+.white	{
+	fill:#FFFFFF;
+}
+
+
+/* Animations */
+
+@keyframes mtrise	{
+	30%	{
+		bottom: -2vw;
+	}
+	70%	{
+		bottom: -2vw;
+	}
+}
+
+@keyframes sunrise	{
+	100%	{
+		bottom: -5vh;
+	}
+}
+
+@keyframes siganim	{
+	100%	{
+		stroke-dashoffset: 0px;
+	}
+}
+
+@keyframes fadeout	{
+	100%	{
+		opacity: 0;
+	}
+}
+
+@keyframes fadein	{
+	100%	{
+		opacity: 1;
+	}
 }
 
 /* Contact Styling */
@@ -93,6 +217,15 @@ input[type=submit]	{
   z-index: 2;
   
   transition: 0.2s opacity;
+}
+
+#gallery-1 > a:nth-of-type(1) > img	{
+	margin: 0 100px;
+}
+
+body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object	{
+	transform: scale(.8);
+	transform-origin: 50% 20%;
 }
 
 /* Gallery Styling */

@@ -4,7 +4,7 @@ console.log('OK');
 
 // Light Gallery
 $('#gallery-1').lightGallery();
-$('#html5-videos').lightGallery();
+
 // Your Awesome Scripts
 
 // Footer
