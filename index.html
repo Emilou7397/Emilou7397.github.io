@@ -39,10 +39,20 @@
 
     <main>
 
+        <div style="display:none;" id="google-doodle-video">
+            <video class="lg-video-object lg-html5" controls preload="none">
+                <source src="img/google-doodle-full.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+            </video>
+        </div>
+
         <div id="gallery-1">
-            <a href="img/google-doodle-full.mov">
-                <img src="img/google-doodle-thumbnail.png" alt="">
-            </a>
+
+            <ul id="html5-videos">
+                <a data-html="#google-doodle-video" >
+                    <img src="img/google-doodle-thumbnail.png" />
+                </a>
+            </ul>
     
             <a href="img/poster-full.png">
                 <img src="img/poster-thumbnail.png" alt="">
