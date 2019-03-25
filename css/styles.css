@@ -4,6 +4,12 @@
 
 /* Your Awesome Styles */
 
+/* Whole-body Styling */
+
+body	{
+	background-color: #A3E3FF;
+}
+
 /* Header Styling */
 
 header	{
@@ -226,6 +232,11 @@ input[type=submit]	{
 body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object	{
 	transform: scale(.8);
 	transform-origin: 50% 20%;
+}
+
+#gallery-1 > a > img	{
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px 0px #3338;
 }
 
 /* Gallery Styling */
