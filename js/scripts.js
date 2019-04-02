@@ -1,6 +1,15 @@
 // Everything OK?
 console.log('OK');
 
+// Gallery Animations
+
+$('a').mouseenter(function()	{
+    $(this).children('img').toggleClass('zoomed');
+});
+
+$('a').mouseleave(function()	{
+    $(this).children('img').toggleClass('zoomed');
+});
 
 // Light Gallery
 $('#gallery-1').lightGallery();

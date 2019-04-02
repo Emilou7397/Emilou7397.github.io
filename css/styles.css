@@ -7,7 +7,7 @@
 /* Whole-body Styling */
 
 body	{
-	background-color: #A3E3FF;
+	background-color: rgb(168, 238, 250);
 }
 
 /* Header Styling */
@@ -183,6 +183,27 @@ input[type=submit]	{
 	margin: 20px;
 }
 
+img	{
+	transition: 0.5s all;
+}
+
+#gallery-1 > a > img	{
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px 0px #3338;
+}
+
+#gallery-1 > a.large > img.zoomed	{
+	transform: scale(1.1);
+	transition: 0.5s all;
+	box-shadow: 20px 20px 10px 0px #3338;
+}
+
+#gallery-1 > a > img.zoomed	{
+	transform: scale(1.1);
+	transition: 0.5s all;
+	box-shadow: 10px 10px 7px 0px #3338;
+}
+
 #lightbox {
   /* Vertical and horizontal alignment */
   display: flex;
@@ -230,11 +251,6 @@ input[type=submit]	{
 body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object	{
 	transform: scale(.8);
 	transform-origin: 50% 20%;
-}
-
-#gallery-1 > a > img	{
-	border-radius: 20px;
-	box-shadow: 5px 5px 5px 0px #3338;
 }
 
 /* Gallery Styling */
