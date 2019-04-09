@@ -7,7 +7,7 @@
 /* Whole-body Styling */
 
 body	{
-	background-color: rgb(168, 238, 250);
+	background-color: #CEF;
 }
 
 /* Header Styling */
@@ -19,6 +19,8 @@ header	{
 	align-items: center;
 	position: relative;
 	overflow: hidden;
+
+	animation: headershrink 1s ease 12s forwards;
 }
 
 svg	{
@@ -29,21 +31,23 @@ svg	{
 	width: 60vw;
 	left: 20vw;
 	bottom: -120%;
-	animation: sunrise 4s ease-out 2s forwards;
+	animation: sunrise 4s ease-out 2s forwards, logoshrink 1s ease 12s forwards;
+	
+	transition: all 1s;
 }
 
 #mt-back	{
 	width: 60vw;
 	right: 0;
 	bottom: -60%;
-	animation: mtrise 14s;
+	animation: mtrise 14s forwards;
 }
 
 #mt-front	{
 	width: 70vw;
 	left: 0;
 	bottom: -100%;
-	animation: mtrise 14s;
+	animation: mtrise 14s forwards;
 }
 
 .sig1	{
@@ -122,6 +126,12 @@ svg	{
 	70%	{
 		bottom: -4vw;
 	}
+	99% {
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
 }
 
 @keyframes sunrise	{
@@ -145,6 +155,23 @@ svg	{
 @keyframes fadein	{
 	100%	{
 		opacity: 1;
+	}
+}
+
+@keyframes logoshrink	{
+	0% {
+		bottom: -10vh;
+	}
+	100%	{
+		width: 200px;
+		left: calc(50vw - 100px);
+		bottom: calc(100% - 220px);
+	}
+}
+
+@keyframes headershrink	{
+	100% {
+		height: 150px;
 	}
 }
 
@@ -188,7 +215,7 @@ img	{
 }
 
 #gallery-1 > a > img	{
-	border-radius: 20px;
+	border-radius: 5px;
 	box-shadow: 5px 5px 5px 0px #3338;
 }
 
