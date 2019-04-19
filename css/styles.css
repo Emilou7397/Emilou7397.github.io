@@ -193,14 +193,14 @@ footer > p	{
 	width: 50vw;
 	right: 0;
 	bottom: -60%;
-	animation: mtrise 14s forwards;
+	animation: mtrise 12s forwards;
 }
 
 #mt-front	{
 	width: 60vw;
 	left: 0;
 	bottom: -100%;
-	animation: mtrise 14s forwards;
+	animation: mtrise 12s forwards;
 }
 
 #background {
@@ -220,7 +220,7 @@ footer > p	{
 	width: 100vw;
 	height: 210vh;
 	background-color: white;
-	animation: fadeout 1s linear 14s forwards;
+	animation: fadeout 1s linear 12s forwards;
 }
 
 .sig1	{
@@ -295,7 +295,7 @@ footer > p	{
 	30%	{
 		bottom: 0;
 	}
-	70%	{
+	82%	{
 		bottom: 0;
 	}
 	99% {
@@ -303,6 +303,7 @@ footer > p	{
 		z-index: 0;
 	}
 	100%	{
+		bottom: -50vh;
 		opacity: 0;
 		z-index: -1;
 	}
@@ -321,7 +322,7 @@ footer > p	{
 }
 
 @keyframes fadeout	{
-	90% {
+	99% {
 		height: 100%;
 	}
 	100%	{
