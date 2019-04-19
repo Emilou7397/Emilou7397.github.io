@@ -1,29 +1,186 @@
-/*
-  DIAGNOSTIC STYLING
+/* PRESENTATION
+* CSS : cssreference.io
 */
 
-/* Your Awesome Styles */
-
-/* Whole-body Styling */
-
-body	{
-	background-color: #CEF;
+body {
+	width: 80vw;
+	max-width: 1200px;
+	margin: 0 auto;
+	color: #141414;
 }
 
-/* Header Styling */
+/* Navbar */
 
-header	{
-	height: 100vh;
+navbar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: relative;
-	overflow: hidden;
-
-	animation: headershrink 1s ease 12s forwards;
+	margin-top: 100px;
 }
 
-svg	{
+navbar > h1 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+navbar > div.links {
+	display: flex;
+	width: 250px;
+	justify-content: space-between;
+}
+
+navbar > div.links > a {
+	text-decoration: none;
+}
+
+navbar > div.links > a:nth-child(1) {
+	color: #009CDA;
+}
+
+navbar > div.links > a:nth-child(2) {
+	color: #FFCF01;
+}
+
+navbar > div.links > a:nth-child(3) {
+	color: #EE3070;
+}
+
+navbar > div.links > a:hover {
+	color: #863F98;
+}
+
+/* About */
+
+#about {
+	margin: 50px auto 6vw auto;
+	max-width: 75ch;
+}
+
+#about > p {
+	
+}
+
+.nav-icon {
+	width: 56px;
+	margin: 0 auto;
+}
+
+.nav-icon > h4 {
+	margin: 6vw 0 15px 0;
+}
+
+.icon {
+	fill: none;
+	stroke: #000;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 7px;
+}
+
+/* Gallery */
+
+#gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: calc(80vw + 40px);
+	margin-left: -20px;
+}
+
+#gallery > div.filters {
+	width: 80vw;
+	display: flex;
+	justify-content: center;
+}
+
+div.filters > div.button-wrapper {
+	margin: 20px 10px 30px 10px;
+	transition: .5s;
+}
+
+div.filters > div.button-wrapper > button {
+	padding: 12px 20px 10px 20px;
+	border: none;
+	color: white;
+}
+
+.filters > div:nth-child(1) > button {
+	background-color: #EE3070;
+}
+
+.filters > div:nth-child(2) > button {
+	background-color: #FFCF01;
+}
+
+.filters > div:nth-child(3) > button {
+	background-color: #863F98;
+}
+
+.filters > div:nth-child(4) > button {
+	background-color: #009CDA;
+}
+
+.button-wrapper:hover {
+	transform: scale(1.1) translate(0, -2px);
+	box-shadow: 0 5px 5px 0 #aaa;
+	transition: .5s;
+}
+
+#gallery > a {
+	margin: 15px 20px;
+}
+
+/* Contact */
+
+#contact	{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+form	{
+	min-width: 200px;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+}
+
+form > h1 {
+	margin: 0 auto;
+}
+
+form > textarea	{
+	max-width: 99.5%;
+	min-height: 10em;
+}
+
+/* Footer */
+
+footer	{
+	width: 80vw;
+	height: 100px;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer > .links	{
+	width: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer > p	{
+	text-align: center;
+}
+
+/* Logo Animation */
+
+#logo-anim > svg	{
 	position: absolute;
 }
 
@@ -33,21 +190,41 @@ svg	{
 	bottom: -120%;
 	animation: sunrise 4s ease-out 2s forwards, logoshrink 1s ease 12s forwards;
 	
-	transition: all 1s;
+	transition: 1s;
 }
 
 #mt-back	{
-	width: 60vw;
+	width: 50vw;
 	right: 0;
 	bottom: -60%;
-	animation: mtrise 12s forwards;
+	animation: mtrise 14s forwards;
 }
 
 #mt-front	{
-	width: 70vw;
+	width: 60vw;
 	left: 0;
 	bottom: -100%;
-	animation: mtrise 12s forwards;
+	animation: mtrise 14s forwards;
+}
+
+#background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	animation: fadeout 1s linear 12s forwards;
+}
+
+#foreground {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 100vw;
+	height: 310vh;
+	background-color: white;
+	animation: fadeout 1s linear 12s forwards;
 }
 
 .sig1	{
@@ -71,7 +248,6 @@ svg	{
 .sun-bottom	{
 	animation: fadeout 1s linear 10s forwards;
 }
-
 
 /* Colors */
 
@@ -121,22 +297,24 @@ svg	{
 
 @keyframes mtrise	{
 	30%	{
-		bottom: -4vw;
+		bottom: 0;
 	}
-	80%	{
-		bottom: -4vw;
+	70%	{
+		bottom: 0;
 	}
 	99% {
 		opacity: 1;
+		z-index: 0;
 	}
-	100%{
+	100%	{
 		opacity: 0;
+		z-index: -1;
 	}
 }
 
 @keyframes sunrise	{
 	100%	{
-		bottom: -10vh;
+		bottom: -7vh;
 	}
 }
 
@@ -149,6 +327,7 @@ svg	{
 @keyframes fadeout	{
 	100%	{
 		opacity: 0;
+		z-index: -1;
 	}
 }
 
@@ -160,119 +339,11 @@ svg	{
 
 @keyframes logoshrink	{
 	0% {
-		bottom: -10vh;
+		bottom: -7vh;
 	}
 	100%	{
-		width: 150px;
-		left: calc(50vw - 75px);
-		bottom: -38%;
+		width: 200px;
+		left: calc(50vw - 100px);
+		bottom: calc(100vh - 205px);
 	}
-}
-
-@keyframes headershrink	{
-	100% {
-		height: 15vh;
-	}
-}
-
-/* Contact Styling */
-
-.contact	{
-	display: flex;
-  	flex-direction: column;
-	align-items: center;
-	margin-bottom: 100px;
-}
-
-form	{
-	min-width: 200px;
-	width: 80vw;
-	max-width: 600px;
-	display: flex;
-	flex-direction: column;
-}
-
-input[type=submit]	{
-	width: 100px;
-	align-self: flex-end;
-}
-
-/* Portfolio Styling */
-
-.gallery	{
-	display: flex;
-}
-
-.item	{
-	width: 25vw;
-	height: 85vh;
-	align-items: center;
-	justify-content: center;
-}
-
-div.wrapper.onMobile	{
-	flex-direction: column;
-}
-
-div.item.onMobile	{
-	width: 100vw;
-}
-
-.one {
-	background-color: #fdd;
-}
-
-.two	{
-	background-color: #dfd;
-}
-
-.three	{
-	background-color: #ddf;
-}
-
-.four	{
-	background-color: #dff;
-}
-
-/* About Styling */
-
-.about > h1	{
-	text-align: center;
-	padding-bottom: 1em;
-}
-
-.about	{
-	padding: 5vw;
-	min-width: 45ch;
-	max-width: 75ch;
-	margin: 0 auto;
-}
-
-/* Footer Styling */
-
-footer	{
-	width: 100vw;
-	height: 100px;
-	
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-footer > .links	{
-	width: 400px;
-	margin: 0 20px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-footer > .links > a	{
-	margin: 0 10px;
-}
-
-footer > p	{
-	text-align: center;
-	margin: 0 20px;
 }
