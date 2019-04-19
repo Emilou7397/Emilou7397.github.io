@@ -220,7 +220,7 @@ footer > p	{
 	width: 100vw;
 	height: 210vh;
 	background-color: white;
-	animation: fadeout 1s linear 12s forwards;
+	animation: fadeout 1s linear 14s forwards;
 }
 
 .sig1	{
@@ -321,9 +321,13 @@ footer > p	{
 }
 
 @keyframes fadeout	{
+	90% {
+		height: 100%;
+	}
 	100%	{
 		opacity: 0;
 		z-index: -1;
+		height: 0px;
 	}
 }
 
