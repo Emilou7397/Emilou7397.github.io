@@ -52,12 +52,8 @@ navbar > div.links > a:hover {
 /* About */
 
 #about {
-	margin: 50px auto 6vw auto;
+	margin: 50px auto 8vw auto;
 	max-width: 75ch;
-}
-
-#about > p {
-	
 }
 
 .nav-icon {
@@ -66,12 +62,12 @@ navbar > div.links > a:hover {
 }
 
 .nav-icon > h4 {
-	margin: 6vw 0 15px 0;
+	margin: 9vw 0 15px 0;
 }
 
 .icon {
 	fill: none;
-	stroke: #000;
+	stroke: #863F98;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-width: 7px;
