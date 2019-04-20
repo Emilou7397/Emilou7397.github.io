@@ -7,12 +7,14 @@ console.log('OK');
 
 $("#gallery a").click(function(e) {
     e.preventDefault();
-    $("#work-detail").addClass("visible");
+    let c = e.currentTarget.classList[0][1];
+    $(`#work-detail-${c}`).addClass("visible");
 })
 
-$("#work-detail").click(function(e) {
+$(".work-detail").click(function(e) {
     e.preventDefault();
-    $("#work-detail").removeClass("visible");
+    let overlay = e.currentTarget.getAttribute("id");
+    $(`#${overlay}`).removeClass("visible");
 })
 
 // Footer

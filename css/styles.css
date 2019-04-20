@@ -128,7 +128,7 @@ div.filters > div.button-wrapper > button {
 
 /* Work Detail Overlay */
 
-#work-detail {
+.work-detail {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -142,7 +142,7 @@ div.filters > div.button-wrapper > button {
 	opacity: 0;
 }
 
-#work-detail.visible {
+.work-detail.visible {
 	opacity: 1;
 	z-index: 1;
 	position: sticky;
