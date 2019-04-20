@@ -66,10 +66,14 @@ navbar > div.links > a:hover {
 
 .icon {
 	fill: none;
-	stroke: #FFCF01;
+	stroke: #009CDA;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-width: 7px;
+}
+
+.icon:hover {
+	stroke: #FFCF01;
 }
 
 @media screen and (max-width:500px) {
@@ -114,15 +118,15 @@ div.filters > div.button-wrapper > button {
 }
 
 .filters > div:nth-child(2) > button {
-	background-color: #FFCF01;
+	background-color: #EE3070;
 }
 
 .filters > div:nth-child(3) > button {
-	background-color: #863F98;
+	background-color: #EE3070;
 }
 
 .filters > div:nth-child(4) > button {
-	background-color: #009CDA;
+	background-color: #EE3070;
 }
 
 .button-wrapper:hover {
@@ -133,6 +137,10 @@ div.filters > div.button-wrapper > button {
 
 #gallery > a {
 	margin: 15px 20px;
+}
+
+a.hidden {
+	display: none;
 }
 
 a > img {
