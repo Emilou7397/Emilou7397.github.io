@@ -38,15 +38,15 @@ navbar > div.links > a:nth-child(1) {
 }
 
 navbar > div.links > a:nth-child(2) {
-	color: #FFCF01;
-}
-
-navbar > div.links > a:nth-child(3) {
 	color: #EE3070;
 }
 
-navbar > div.links > a:hover {
+navbar > div.links > a:nth-child(3) {
 	color: #863F98;
+}
+
+navbar > div.links > a:hover {
+	color: #FFCF01;
 }
 
 /* About */
@@ -67,7 +67,7 @@ navbar > div.links > a:hover {
 
 .icon {
 	fill: none;
-	stroke: #863F98;
+	stroke: #FFCF01;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-width: 7px;
@@ -87,16 +87,20 @@ navbar > div.links > a:hover {
 	width: 80vw;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 div.filters > div.button-wrapper {
-	margin: 20px 10px 30px 10px;
+	margin: 0 10px 30px 10px;
+	border-radius: 20px;
 	transition: .5s;
 }
 
 div.filters > div.button-wrapper > button {
 	padding: 12px 20px 10px 20px;
 	border: none;
+	border-radius: 20px;
+	width: 150px;
 	color: white;
 }
 
@@ -195,7 +199,7 @@ div.filters > div.button-wrapper > button {
 
 form	{
 	min-width: 200px;
-	width: 80vw;
+	width: 68vw;
 	display: flex;
 	flex-direction: column;
 }
@@ -205,7 +209,7 @@ form > h1 {
 }
 
 form > textarea	{
-	max-width: 99.5%;
+	max-width: 99.4%;
 	min-height: 10em;
 }
 
@@ -400,9 +404,13 @@ footer > p	{
 	0% {
 		bottom: -7vh;
 	}
+	99% {
+		z-index: 0;
+	}
 	100%	{
 		width: 200px;
 		left: calc(50vw - 100px);
 		bottom: calc(100vh - 205px);
+		z-index: -1;
 	}
 }
