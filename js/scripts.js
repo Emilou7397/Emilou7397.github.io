@@ -39,6 +39,9 @@ let albumimgscurr = 0;
 let beeimgs = ["/img/bee-logo.png", "/img/bee-labels.png"];
 let beeimgscurr = 0;
 
+let sparkimgs = ["/img/spark-graphics.png", "/img/spark-flyer.png", "/img/spark-poster.png", "/img/spark-sm.png", "/img/spark-16x9.png"];
+let sparkimgscurr = 0;
+
 $("#gallery a").click(function(e) {
     e.preventDefault();
     let c = e.currentTarget.classList[0][1];
@@ -70,6 +73,15 @@ $(".multi-img").children("svg").click(function(e) {
     if (target == "work-detail-6"){
         beeimgscurr = (beeimgscurr + 1) % 2;
         e.currentTarget.parentElement.children[1].children[0].setAttribute("src", beeimgs[beeimgscurr]);
+    }
+    if (target == "work-detail-7"){
+        if (e.currentTarget.classList[0] == "fwd") {
+            sparkimgscurr = (sparkimgscurr + 1) % 5;
+        }
+        else {
+            sparkimgscurr = (sparkimgscurr + 4) % 5;
+        }
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", sparkimgs[sparkimgscurr]);
     }
 });
 
