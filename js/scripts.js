@@ -30,17 +30,27 @@ $("button").click(function(e) {
 
 // Work detail overlay
 
+let voteimgs = ["/img/vote-buttons.png", "/img/vote-poster.png", "/img/vote-sm.png", "/img/vote-zine.png"];
+
 $("#gallery a").click(function(e) {
     e.preventDefault();
     let c = e.currentTarget.classList[0][1];
     $(`#work-detail-${c}`).addClass("visible");
 })
 
-$(".work-detail").click(function(e) {
+$(".close").click(function(e) {
     e.preventDefault();
-    let overlay = e.currentTarget.getAttribute("id");
+    let overlay = e.currentTarget.parentElement.getAttribute("id");
     $(`#${overlay}`).removeClass("visible");
 })
+
+$(".multi-img").children("svg").click(function(e) {
+    e.preventDefault();
+    let target = e.currentTarget.parentElement.parentElement.getAttribute("id");
+    if (target == "work-detail-5"){
+        console.log(voteimgs);
+    }
+});
 
 // Footer
 
