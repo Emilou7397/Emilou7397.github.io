@@ -30,7 +30,11 @@ $("button").click(function(e) {
 
 // Work detail overlay
 
-let voteimgs = ["/img/vote-buttons.png", "/img/vote-poster.png", "/img/vote-sm.png", "/img/vote-zine.png"];
+let voteimgs = ["/img/voter-drive-thumbnail.png", "/img/vote-buttons.png", "/img/vote-poster.png", "/img/vote-sm.png", "/img/vote-zine.png"];
+let voteimgscurr = 0;
+
+let albumimgs = ["/img/album-cover-front.png", "/img/album-cover-back.png", "/img/album-cover-full.png"];
+let albumimgscurr = 0;
 
 $("#gallery a").click(function(e) {
     e.preventDefault();
@@ -48,7 +52,22 @@ $(".multi-img").children("svg").click(function(e) {
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement.getAttribute("id");
     if (target == "work-detail-5"){
-        console.log(voteimgs);
+        if (e.currentTarget.classList[0] == "fwd") {
+            voteimgscurr = (voteimgscurr + 1) % 5;
+        }
+        else {
+            voteimgscurr = (voteimgscurr + 4) % 5;
+        }
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", voteimgs[voteimgscurr]);
+    }
+    if (target == "work-detail-4"){
+        if (e.currentTarget.classList[0] == "fwd") {
+            albumimgscurr = (albumimgscurr + 1) % 3;
+        }
+        else {
+            albumimgscurr = (albumimgscurr + 2) % 3;
+        }
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", albumimgs[albumimgscurr]);
     }
 });
 
