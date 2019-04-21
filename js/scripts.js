@@ -36,6 +36,9 @@ let voteimgscurr = 0;
 let albumimgs = ["/img/album-cover-front.png", "/img/album-cover-back.png", "/img/album-cover-full.png"];
 let albumimgscurr = 0;
 
+let beeimgs = ["/img/bee-logo.png", "/img/bee-labels.png"];
+let beeimgscurr = 0;
+
 $("#gallery a").click(function(e) {
     e.preventDefault();
     let c = e.currentTarget.classList[0][1];
@@ -51,6 +54,15 @@ $(".close").click(function(e) {
 $(".multi-img").children("svg").click(function(e) {
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement.getAttribute("id");
+    if (target == "work-detail-4"){
+        if (e.currentTarget.classList[0] == "fwd") {
+            albumimgscurr = (albumimgscurr + 1) % 3;
+        }
+        else {
+            albumimgscurr = (albumimgscurr + 2) % 3;
+        }
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", albumimgs[albumimgscurr]);
+    }
     if (target == "work-detail-5"){
         if (e.currentTarget.classList[0] == "fwd") {
             voteimgscurr = (voteimgscurr + 1) % 5;
@@ -60,14 +72,9 @@ $(".multi-img").children("svg").click(function(e) {
         }
         e.currentTarget.parentElement.children[1].children[0].setAttribute("src", voteimgs[voteimgscurr]);
     }
-    if (target == "work-detail-4"){
-        if (e.currentTarget.classList[0] == "fwd") {
-            albumimgscurr = (albumimgscurr + 1) % 3;
-        }
-        else {
-            albumimgscurr = (albumimgscurr + 2) % 3;
-        }
-        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", albumimgs[albumimgscurr]);
+    if (target == "work-detail-6"){
+        beeimgscurr = (beeimgscurr + 1) % 2;
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", beeimgs[beeimgscurr]);
     }
 });
 
