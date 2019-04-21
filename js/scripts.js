@@ -33,7 +33,7 @@ $("button").click(function(e) {
 let voteimgs = ["/img/voter-drive-thumbnail.png", "/img/vote-buttons.png", "/img/vote-poster.png", "/img/vote-sm.png", "/img/vote-zine.png"];
 let voteimgscurr = 0;
 
-let albumimgs = ["/img/album-cover-front.png", "/img/album-cover-back.png", "/img/album-cover-full.png"];
+let albumimgs = ["/img/album-cover-front.png", "/img/album-cover-back.png"];
 let albumimgscurr = 0;
 
 let beeimgs = ["/img/bee-logo.png", "/img/bee-labels.png"];
@@ -55,12 +55,7 @@ $(".multi-img").children("svg").click(function(e) {
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement.getAttribute("id");
     if (target == "work-detail-4"){
-        if (e.currentTarget.classList[0] == "fwd") {
-            albumimgscurr = (albumimgscurr + 1) % 3;
-        }
-        else {
-            albumimgscurr = (albumimgscurr + 2) % 3;
-        }
+        albumimgscurr = (albumimgscurr + 1) % 2;
         e.currentTarget.parentElement.children[1].children[0].setAttribute("src", albumimgs[albumimgscurr]);
     }
     if (target == "work-detail-5"){
