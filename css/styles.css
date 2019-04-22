@@ -2,22 +2,25 @@
 * CSS : cssreference.io
 */
 
+html {
+	background-color: #D4EFFB;
+}
+
 body {
-	margin: 0 auto;
 	color: #141414;
 	max-width: 2000px;
 }
 
-p {
-	font-size: 1.2em;
-}
-
-a {
+p, a {
 	font-size: 1.2em;
 }
 
 h1 {
 	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
 }
 
 /* Navbar */
@@ -26,7 +29,9 @@ navbar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 100px;
+	width: 68vw;
+	padding: 100px 16vw 50px 16vw;
+	background-color: #fff;
 }
 
 navbar > h1 {
@@ -60,30 +65,6 @@ navbar > div.links > a:hover {
 	color: #FFCF01;
 }
 
-/* About */
-
-#about {
-	margin: 50px auto 100px auto;
-	width: 68vw;
-}
-
-.content > p {
-	max-width: 90ch;
-	margin: 1em auto;
-}
-
-.content {
-	padding: 5vh 10vw 5vh 10vw;
-	background-color: #D4EFFB;
-	width: 48vw;
-}
-
-@media screen and (max-width:500px) {
-	#about > p {
-		font-size: 3vw;
-	}
-}
-
 /* Gallery */
 
 #gallery {
@@ -93,8 +74,8 @@ navbar > div.links > a:hover {
 	align-items: center;
 	width: 68vw;
 	margin: 50px auto;
-	padding: 50px 0;
-	background-color: #F9D1DF;
+	padding: 50px 16vw 35px 16vw;
+	background-color: #fff;
 }
 
 #gallery > a > img {
@@ -153,7 +134,7 @@ a.hidden {
 }
 
 a > img {
-	width: 300px;
+	width: 350px;
 }
 
 /* Work Detail Overlay */
@@ -253,20 +234,45 @@ a > img {
 	}
 }
 
+/* About/Contact Group */
+
+#about-contact	{
+	background-color: #fff;
+
+	width: 68vw;
+	padding: 50px 16vw;
+	display: flex;
+	justify-content: center;
+}
+
+/* About */
+
+#about {
+	margin-right: 50px;
+}
+
+#about > p {
+	max-width: 90ch;
+}
+
+@media screen and (max-width:500px) {
+	#about > p {
+		font-size: 3vw;
+	}
+}
+
 /* Contact */
 
 #contact	{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 50px auto 0 auto;
-	width: 68vw;
+	margin-left: 50px;
 }
 
 form	{
 	min-width: 200px;
-	max-width: 1360px;
-	width: 68vw;
+	width: calc(34vw - 50px);
 	display: flex;
 	flex-direction: column;
 }
@@ -283,9 +289,9 @@ form > textarea	{
 /* Footer */
 
 footer	{
-	padding: 0 12.5vw;
+	width: 68vw;
 	height: 100px;
-	
+	margin: 0 16vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -310,8 +316,8 @@ footer > p	{
 }
 
 #logo	{
-	width: 60vw;
-	left: 20vw;
+	width: 50vw;
+	left: 25vw;
 	bottom: -120%;
 	animation: sunrise 4s ease-out 2s forwards, logoshrink 1s ease 12s forwards;
 	
@@ -471,13 +477,9 @@ footer > p	{
 	0% {
 		bottom: -10vh;
 	}
-	99% {
-		z-index: 0;
-	}
 	100%	{
 		width: 200px;
 		left: calc(50vw - 100px);
-		bottom: calc(100vh - 215px);
-		z-index: -1;
+		bottom: calc(100vh - 225px);
 	}
 }
