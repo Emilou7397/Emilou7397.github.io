@@ -153,6 +153,9 @@ a > img {
 	z-index: -1;
 	opacity: 0;
 }
+.info > p > a {
+	font-size: 1em;
+}
 
 .info {
 	min-width: 45ch;
