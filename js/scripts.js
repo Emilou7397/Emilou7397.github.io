@@ -30,7 +30,7 @@ $("button").click(function(e) {
 
 // Work detail overlay
 
-let voteimgs = ["/img/voter-drive-thumbnail.png", "/img/vote-buttons.png", "/img/vote-poster.png", "/img/vote-sm.png", "/img/vote-zine.png"];
+let voteimgs = ["/img/voter-drive-thumbnail.png", "/img/vote-poster.png", "/img/vote-buttons.png", "/img/vote-sm.png", "/img/vote-zine.png"];
 let voteimgscurr = 0;
 
 let albumimgs = ["/img/album-cover-front.png", "/img/album-cover-back.png"];

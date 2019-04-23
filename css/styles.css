@@ -359,7 +359,7 @@ footer > p	{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 99.4vw;
 	height: 100vh;
 	background-color: white;
 	animation: fadeout 1s linear 12s forwards;
@@ -369,7 +369,7 @@ footer > p	{
 	position: absolute;
 	top: 100vh;
 	left: 0;
-	width: 100vw;
+	width: 99.4vw;
 	height: 310vh;
 	background-color: white;
 	animation: fadeout 1s linear 12s forwards;
