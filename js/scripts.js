@@ -31,16 +31,14 @@ $("button").click(function(e) {
 // Work detail overlay
 
 let voteimgs = ["/img/voter-drive-thumbnail.png", "/img/vote-poster.png", "/img/vote-buttons.png", "/img/vote-sm.png", "/img/vote-zine.png"];
-let voteimgscurr = 0;
 
 let albumimgs = ["/img/album-cover-front.png", "/img/album-cover-back.png"];
-let albumimgscurr = 0;
 
-let beeimgs = ["/img/bee-logo.png", "/img/bee-labels.png"];
-let beeimgscurr = 0;
+let beeimgs = ["/img/bee-logo.png", "/img/bee-labels.png", "/img/bee-mockup1.png", "/img/bee-mockup2.png"];
 
 let sparkimgs = ["/img/spark-graphics.png", "/img/spark-flyer.png", "/img/spark-poster.png", "/img/spark-sm.png", "/img/spark-16x9.png"];
-let sparkimgscurr = 0;
+
+let currimg = 0;
 
 $("#gallery a").click(function(e) {
     e.preventDefault();
@@ -58,30 +56,35 @@ $(".multi-img").children("svg").click(function(e) {
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement.getAttribute("id");
     if (target == "work-detail-4"){
-        albumimgscurr = (albumimgscurr + 1) % 2;
-        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", albumimgs[albumimgscurr]);
+        currimg = (currimg + 1) % 2;
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", albumimgs[currimg]);
     }
     if (target == "work-detail-5"){
         if (e.currentTarget.classList[0] == "fwd") {
-            voteimgscurr = (voteimgscurr + 1) % 5;
+            currimg = (currimg + 1) % 5;
         }
         else {
-            voteimgscurr = (voteimgscurr + 4) % 5;
+            currimg = (currimg + 4) % 5;
         }
-        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", voteimgs[voteimgscurr]);
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", voteimgs[currimg]);
     }
     if (target == "work-detail-7"){
-        beeimgscurr = (beeimgscurr + 1) % 2;
-        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", beeimgs[beeimgscurr]);
+        if (e.currentTarget.classList[0] == "fwd") {
+            currimg = (currimg + 1) % 4;
+        }
+        else {
+            currimg = (currimg+ 3) % 4;
+        }
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", beeimgs[currimg]);
     }
     if (target == "work-detail-8"){
         if (e.currentTarget.classList[0] == "fwd") {
-            sparkimgscurr = (sparkimgscurr + 1) % 5;
+            currimg = (currimg + 1) % 5;
         }
         else {
-            sparkimgscurr = (sparkimgscurr + 4) % 5;
+            currimg = (currimg + 4) % 5;
         }
-        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", sparkimgs[sparkimgscurr]);
+        e.currentTarget.parentElement.children[1].children[0].setAttribute("src", sparkimgs[currimg]);
     }
 });
 
@@ -100,6 +103,8 @@ $(".close").click(function(e) {
     if (target == "work-detail-8"){
         e.currentTarget.parentElement.children[1].children[1].children[0].setAttribute("src", sparkimgs[0]);
     }
+
+    currimg = 0;
 })
 
 $(".prev").hover(function(e) {
