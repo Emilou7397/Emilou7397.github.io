@@ -3,7 +3,8 @@
 */
 
 html {
-	background-color: #D4EFFB;
+	background-image: url("../img/memphis-pattern.png");
+	background-size: 30vw;
 }
 
 body {
@@ -30,7 +31,8 @@ navbar {
 	flex-direction: column;
 	align-items: center;
 	width: 68vw;
-	padding: 100px 16vw 50px 16vw;
+	padding: 100px 5vw 50px 5vw;
+	margin: 0 11vw;
 	background-color: #fff;
 }
 
@@ -73,8 +75,8 @@ navbar > div.links > a:hover {
 	justify-content: center;
 	align-items: center;
 	width: 68vw;
-	margin: 50px auto;
-	padding: 50px 16vw 35px 16vw;
+	margin: 50px 11vw;
+	padding: 50px 5vw 35px 5vw;
 	background-color: #fff;
 }
 
@@ -243,7 +245,8 @@ a > img {
 	background-color: #fff;
 
 	width: 68vw;
-	padding: 50px 16vw;
+	padding: 50px 5vw;
+	margin: 0 11vw;
 	display: flex;
 	justify-content: center;
 }
