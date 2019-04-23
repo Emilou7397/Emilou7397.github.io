@@ -85,6 +85,31 @@ $(".multi-img").children("svg").click(function(e) {
     }
 });
 
+$(".close").click(function(e) {
+    let target = e.currentTarget.parentElement.getAttribute("id");
+
+    if (target == "work-detail-4"){
+        e.currentTarget.parentElement.children[1].children[1].children[0].setAttribute("src", albumimgs[0]);
+    }
+    if (target == "work-detail-5"){
+        e.currentTarget.parentElement.children[1].children[1].children[0].setAttribute("src", voteimgs[0]);
+    }
+    if (target == "work-detail-7"){
+        e.currentTarget.parentElement.children[1].children[1].children[0].setAttribute("src", beeimgs[0]);
+    }
+    if (target == "work-detail-8"){
+        e.currentTarget.parentElement.children[1].children[1].children[0].setAttribute("src", sparkimgs[0]);
+    }
+})
+
+$(".prev").hover(function(e) {
+    e.currentTarget.children[1].classList.toggle("hover");
+})
+
+$(".fwd").hover(function(e) {
+    e.currentTarget.children[1].classList.toggle("hover");
+})
+
 // Footer
 
 var today = new Date();

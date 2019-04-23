@@ -167,6 +167,7 @@ a > img {
 
 .multi-img {
 	display: flex;
+	align-items: center;
 }
 
 .multi-img > svg:nth-child(1) {
@@ -185,13 +186,17 @@ a > img {
 
 .icon {
 	fill: none;
-	stroke: 863F98;
+	stroke: #863F98;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-width: 7px;
 }
 
-.icon:hover {
+.multi-img > svg {
+	height: 100px;
+}
+
+.hover {
 	stroke: #FFCF01;
 }
 
