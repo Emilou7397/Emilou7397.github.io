@@ -13,7 +13,7 @@ body {
 	font-family: sans-serif;
 }
 
-p, a {
+p {
 	font-size: 1.1em;
 }
 
@@ -23,6 +23,15 @@ h1 {
 
 h2 {
 	font-size: 2em;
+}
+
+a {
+	text-decoration: none;
+	color: #009CDA;
+}
+
+a:hover {
+	color: #FFCF01;
 }
 
 /* Navbar */
@@ -44,29 +53,14 @@ navbar > h1 {
 
 navbar > div.links {
 	display: flex;
-	width: 250px;
+	width: 275px;
 	z-index: 1;
 	justify-content: space-between;
 }
 
 navbar > div.links > a {
 	text-decoration: none;
-}
-
-navbar > div.links > a:nth-child(1) {
-	color: #009CDA;
-}
-
-navbar > div.links > a:nth-child(2) {
-	color: #EE3070;
-}
-
-navbar > div.links > a:nth-child(3) {
-	color: #863F98;
-}
-
-navbar > div.links > a:hover {
-	color: #FFCF01;
+	font-size: 1.2em;
 }
 
 /* Gallery */
@@ -105,25 +99,11 @@ div.filters > div.button-wrapper > button {
 	border-radius: 20px;
 	width: 150px;
 	color: white;
-}
-
-.filters > div:nth-child(1) > button {
 	background-color: #EE3070;
+
 }
 
-.filters > div:nth-child(2) > button {
-	background-color: #EE3070;
-}
-
-.filters > div:nth-child(3) > button {
-	background-color: #EE3070;
-}
-
-.filters > div:nth-child(4) > button {
-	background-color: #EE3070;
-}
-
-.button-wrapper:hover {
+div.filters > .button-wrapper:hover {
 	transform: scale(1.1) translate(0, -2px);
 	box-shadow: 0 5px 5px 0 #aaa;
 	transition: .5s;
@@ -156,9 +136,6 @@ a > img {
 	justify-content: center;
 	z-index: -1;
 	opacity: 0;
-}
-.info > p > a {
-	font-size: 1em;
 }
 
 .info {
@@ -208,7 +185,7 @@ a > img {
 
 .icon {
 	fill: none;
-	stroke: #009CDA;
+	stroke: 863F98;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-width: 7px;
@@ -292,9 +269,35 @@ form > h1 {
 	margin: 0 auto;
 }
 
+form > label {
+	margin: 10px 0 2px 0;
+}
+
 form > textarea	{
-	max-width: 99.4%;
+	max-width: 99.2%;
 	min-height: 10em;
+}
+
+form > div.button-wrapper {
+	margin: 15px 0 0 calc(100% - 150px);
+	width: 150px;
+	border-radius: 20px;
+	transition: 0.5s;
+}
+
+form > div.button-wrapper > input {
+	padding: 12px 20px 10px 20px;
+	border: none;
+	border-radius: 20px;
+	width: 150px;
+	color: white;
+	background-color: #EE3070;
+}
+
+form > .button-wrapper:hover {
+	transform: scale(1.1) translate(0, -2px);
+	box-shadow: 0 5px 5px 0 #aaa;
+	transition: .5s;
 }
 
 /* Footer */

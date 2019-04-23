@@ -70,11 +70,11 @@ $(".multi-img").children("svg").click(function(e) {
         }
         e.currentTarget.parentElement.children[1].children[0].setAttribute("src", voteimgs[voteimgscurr]);
     }
-    if (target == "work-detail-6"){
+    if (target == "work-detail-7"){
         beeimgscurr = (beeimgscurr + 1) % 2;
         e.currentTarget.parentElement.children[1].children[0].setAttribute("src", beeimgs[beeimgscurr]);
     }
-    if (target == "work-detail-7"){
+    if (target == "work-detail-8"){
         if (e.currentTarget.classList[0] == "fwd") {
             sparkimgscurr = (sparkimgscurr + 1) % 5;
         }
