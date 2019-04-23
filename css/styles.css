@@ -4,16 +4,17 @@
 
 html {
 	background-image: url("../img/memphis-pattern.png");
-	background-size: 30vw;
+	background-size: 100vh;
+	background-attachment: fixed;
 }
 
 body {
 	color: #141414;
-	max-width: 2000px;
+	font-family: sans-serif;
 }
 
 p, a {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 h1 {
@@ -32,7 +33,7 @@ navbar {
 	align-items: center;
 	width: 68vw;
 	padding: 100px 5vw 50px 5vw;
-	margin: 0 11vw;
+	margin: 50px 11vw 0 11vw;
 	background-color: #fff;
 }
 
@@ -44,6 +45,7 @@ navbar > h1 {
 navbar > div.links {
 	display: flex;
 	width: 250px;
+	z-index: 1;
 	justify-content: space-between;
 }
 
@@ -147,7 +149,7 @@ a > img {
 	left: 0;
 	height: 100vh;
 	width: 90vw;
-	padding-left: 10vw;
+	padding-left: 9.4vw;
 	background-color: #fff;
 	display: flex;
 	align-items: center;
@@ -160,14 +162,13 @@ a > img {
 }
 
 .info {
-	min-width: 45ch;
-	width: 40vw;
+	width: 35vw;
 	margin-left: 5vw;
 }
 
 .work-detail.visible {
 	opacity: 1;
-	z-index: 1;
+	z-index: 2;
 	position: sticky;
 }
 
@@ -176,7 +177,7 @@ a > img {
 }
 
 .image > video {
-	height: 60vh;
+	height: 50vh;
 }
 
 .close {
@@ -227,8 +228,12 @@ a > img {
 		margin-left: 0;
 	}
 	
-	.image > img, .image > video {
+	.image > img {
 		height: 60vh;
+	}
+
+	.image > video {
+		height: 50vh;
 	}
 }
 
@@ -297,11 +302,13 @@ form > textarea	{
 footer	{
 	width: 68vw;
 	height: 100px;
-	margin: 0 16vw;
+	padding: 0 5vw;
+	margin: 50px 11vw 25px 11vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	background-color: #fff;
 }
 
 footer > .links	{
@@ -316,6 +323,10 @@ footer > p	{
 }
 
 /* Logo Animation */
+
+#logo-anim > * {
+	z-index: 2;
+}
 
 #logo-anim > svg	{
 	position: absolute;
@@ -441,7 +452,7 @@ footer > p	{
 	}
 	99% {
 		opacity: 1;
-		z-index: 0;
+		z-index: 2;
 	}
 	100%	{
 		bottom: -50vh;
@@ -452,7 +463,7 @@ footer > p	{
 
 @keyframes sunrise	{
 	100%	{
-		bottom: -10vh;
+		bottom: -10%;
 	}
 }
 
@@ -465,6 +476,7 @@ footer > p	{
 @keyframes fadeout	{
 	99% {
 		height: 100%;
+		z-index: 2;
 	}
 	100%	{
 		opacity: 0;
@@ -481,11 +493,15 @@ footer > p	{
 
 @keyframes logoshrink	{
 	0% {
-		bottom: -10vh;
+		bottom: -10%;
+	}
+	99% {
+		z-index: 2;
 	}
 	100%	{
 		width: 200px;
 		left: calc(50vw - 100px);
-		bottom: calc(100vh - 225px);
+		bottom: calc(100vh - 265px);
+		z-index: 0;
 	}
 }
