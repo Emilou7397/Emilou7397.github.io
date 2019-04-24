@@ -2,15 +2,13 @@
 * CSS : cssreference.io
 */
 
-::-webkit-scrollbar { 
-    display: none; 
-}
-
 html {
 	background-image: url("../img/memphis-pattern.png");
 	background-size: 100vh;
 	background-attachment: fixed;
 	max-width: 100vw;
+	overflow: scroll;
+	overflow-x: hidden;
 }
 
 body {
@@ -564,8 +562,13 @@ footer > p	{
 /* Generic Media Queries */
 
 @media screen and (max-width: 500px) {
+
+	::-webkit-scrollbar { 
+		display: none; 
+	}
 	html {
-		overflow: hidden;
+		overflow: scroll;
+		overflow-x: hidden;
 	}
 	navbar {
 		width: 100vw;
