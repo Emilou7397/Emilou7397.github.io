@@ -2,15 +2,21 @@
 * CSS : cssreference.io
 */
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 html {
 	background-image: url("../img/memphis-pattern.png");
 	background-size: 100vh;
 	background-attachment: fixed;
+	max-width: 100vw;
 }
 
 body {
 	color: #141414;
 	font-family: sans-serif;
+	width: calc(100vw - 17px);
 }
 
 p {
@@ -37,12 +43,13 @@ a:hover {
 /* Navbar */
 
 navbar {
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 68vw;
+	width: calc(80vw - 17px);
 	padding: 100px 5vw 50px 5vw;
-	margin: 50px 11vw 0 11vw;
+	margin: 50px auto 0 auto;
 	background-color: #fff;
 }
 
@@ -66,12 +73,13 @@ navbar > div.links > a {
 /* Gallery */
 
 #gallery {
+	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: 68vw;
-	margin: 50px 11vw;
+	width: calc(80vw - 17px);
+	margin: 50px auto;
 	padding: 50px 5vw 35px 5vw;
 	background-color: #fff;
 }
@@ -124,11 +132,12 @@ a > img {
 /* Work Detail Overlay */
 
 .work-detail {
+	box-sizing: border-box;
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100vh;
-	width: 90vw;
+	width: calc(100vw - 17px);
 	padding-left: 9.4vw;
 	background-color: #fff;
 	display: flex;
@@ -150,11 +159,11 @@ a > img {
 }
 
 .image > img {
-	height: 70vh;
+	width: 40vw;
 }
 
 .image > video {
-	height: 50vh;
+	width: 40vw;
 }
 
 .close {
@@ -166,6 +175,7 @@ a > img {
 }
 
 .multi-img {
+	max-width: calc(100vw - 17px);
 	display: flex;
 	align-items: center;
 }
@@ -208,14 +218,15 @@ a > img {
 
 	.info {
 		margin-left: 0;
+		width: 80vw;
 	}
 	
 	.image > img {
-		height: 60vh;
+		width: 60vw;
 	}
 
 	.image > video {
-		height: 50vh;
+		width: 80vw;
 	}
 }
 
@@ -224,16 +235,24 @@ a > img {
 		min-width: 80vw;
 		font-size: 3vw;
 	}
+	.image > img {
+		width: 60vw;
+	}
+
+	.image > video {
+		width: 80vh;
+	}
 }
 
 /* About/Contact Group */
 
 #about-contact	{
+	box-sizing: border-box;
 	background-color: #fff;
 
-	width: 68vw;
+	width: calc(80vw - 17px);
+	margin: 0 auto;
 	padding: 50px 5vw;
-	margin: 0 11vw;
 	display: flex;
 	justify-content: center;
 }
@@ -258,6 +277,7 @@ a > img {
 
 #contact	{
 	display: flex;
+	width: 40vw;
 	flex-direction: column;
 	align-items: center;
 	margin-left: 50px;
@@ -265,7 +285,7 @@ a > img {
 
 form	{
 	min-width: 200px;
-	width: calc(34vw - 50px);
+	width: calc(100% - 50px);
 	display: flex;
 	flex-direction: column;
 }
@@ -305,13 +325,40 @@ form > .button-wrapper:hover {
 	transition: .5s;
 }
 
+@media screen and (max-width:1050px) {
+	#about-contact {
+		flex-direction: column;
+	}
+	#contact{
+		margin-left: -25px;
+		width: calc(80vw - 50px);
+	}
+	#about {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width:500px) {
+	#about-contact {
+		flex-direction: column;
+	}
+	#contact{
+		margin-left: -25px;
+		width: 100vw;
+	}
+	#about {
+		margin: 0;
+	}
+}
+
 /* Footer */
 
 footer	{
-	width: 68vw;
+	box-sizing: border-box;
+	width: calc(80vw - 17px);
+	margin: 50px auto 25px auto;
 	height: 100px;
 	padding: 0 5vw;
-	margin: 50px 11vw 25px 11vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -511,5 +558,34 @@ footer > p	{
 		left: calc(50vw - 100px);
 		bottom: calc(100vh - 265px);
 		z-index: 0;
+	}
+}
+
+/* Generic Media Queries */
+
+@media screen and (max-width: 500px) {
+	html {
+		overflow: hidden;
+	}
+	navbar {
+		width: 100vw;
+	}
+	#gallery {
+		width: 100vw;
+	}
+	.work-detail {
+		width: 100vw;
+	}
+	#about-contact {
+		width: 100vw;
+	}
+	footer {
+		width: 100vw;
+	}
+	.image > img {
+		width: 100vw;
+	}
+	.image > video {
+		width: 100vw;
 	}
 }
