@@ -230,6 +230,7 @@ a > img {
 	.info {
 		min-width: 80vw;
 		font-size: 3vw;
+	}
 }
 
 /* About/Contact Group */
@@ -559,31 +560,10 @@ footer > p	{
 	html {
 		background-size: 50vh;
 	}
-	body {
-		width: 100vw;
-	}
-	navbar {
-		width: 100vw;
-	}
-	#gallery {
-		width: 100vw;
-	}
-	.work-detail {
-		width: 100vw;
-	}
-	#about-contact {
-		width: 100vw;
-	}
-	footer {
-		width: 100vw;
-	}
-	.image > img {
+	body, navbar, #gallery, .work-detail, #about-contact, footer, .image > img, .image > video {
 		width: 100vw;
 	}
 	.multi-img > .image > img {
 		width: calc(100vw - 200px);
-	}
-	.image > video {
-		width: 100vw;
 	}
 }
