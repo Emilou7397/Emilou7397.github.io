@@ -433,7 +433,7 @@ footer > p	{
 
 .sig1	{
 	stroke-dasharray: 1490px;
-	stroke-dashoffset: -1490px;
+	stroke-dashoffset: -2980px;
 	animation: siganim 2s linear 6.5s forwards;
 }
 
