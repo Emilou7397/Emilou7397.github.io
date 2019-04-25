@@ -434,7 +434,7 @@ footer > p	{
 .sig1	{
 	stroke-dasharray: 1490px;
 	stroke-dashoffset: -1490px;
-	animation: siganim1 2s linear 6.5s forwards;
+	animation: siganim 2s linear 6.5s forwards;
 }
 
 .sig2	{
@@ -520,15 +520,6 @@ footer > p	{
 @keyframes sunrise	{
 	100%	{
 		bottom: calc(-10% + 100px);
-	}
-}
-
-@keyframes siganim1 {
-	0% {
-		stroke-dashoffset: -1490px;
-	}
-	100% {
-		stroke-dashoffset: 0px;
 	}
 }
 
