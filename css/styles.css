@@ -61,6 +61,7 @@ navbar {
 	padding: 100px 5vw 50px 5vw;
 	margin: 50px auto 0 auto;
 	background-color: #fff;
+	z-index: -2;
 }
 
 /* Gallery */
@@ -75,6 +76,7 @@ navbar {
 	margin: 50px auto;
 	padding: 50px 5vw 35px 5vw;
 	background-color: #fff;
+	z-index: 0;
 }
 
 #gallery > a > img {
@@ -388,6 +390,8 @@ footer > p	{
 	top: 0;
 	left: 0;
 	overflow: hidden;
+	z-index: 0;
+	animation: bgshrink 1s ease 12s forwards;
 }
 
 #logo-anim > * {
@@ -401,7 +405,7 @@ footer > p	{
 #logo	{
 	width: 50vw;
 	left: 25vw;
-	bottom: -120%;
+	bottom: -100%;
 	animation: sunrise 4s ease-out 2s forwards, logoshrink 1s ease 12s forwards;
 	
 	transition: 1s;
@@ -426,7 +430,7 @@ footer > p	{
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100.5vh;
+	height: 100vh;
 	background-color: white;
 	animation: fadeout 1s linear 12s forwards;
 }
@@ -519,7 +523,7 @@ footer > p	{
 
 @keyframes sunrise	{
 	100%	{
-		bottom: calc(-10% + 100px);
+		bottom: calc(-10vh + 100px);
 	}
 }
 
@@ -547,9 +551,15 @@ footer > p	{
 	}
 }
 
+@keyframes bgshrink {
+	100% {
+		height: 36vh;
+	}
+}
+
 @keyframes logoshrink	{
 	0% {
-		bottom: calc(-10% + 100px);
+		bottom: calc(-10vh + 100px);
 	}
 	99% {
 		z-index: 2;
@@ -557,7 +567,7 @@ footer > p	{
 	100%	{
 		width: 400px;
 		left: calc(50vw - 200px);
-		bottom: calc(100vh - 480px);
+		bottom: calc(-10vh + 100px);
 		z-index: 0;
 	}
 }
