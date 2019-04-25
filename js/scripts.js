@@ -8,6 +8,11 @@ console.log('OK');
 $("button").click(function(e) {
     e.preventDefault();
     let filter = e.currentTarget.classList[0];
+    let buttons = e.currentTarget.parentElement.parentElement.children;
+    for ( i = 0 ; i < buttons.length ; i++){
+        buttons[i].children[0].classList.remove("selected");
+    }
+    e.currentTarget.classList.add("selected");
     let pieces = $("#gallery").children("a");
     let classes;
     let flag = false;
