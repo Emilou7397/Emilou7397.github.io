@@ -7,14 +7,13 @@ html {
 	background-size: 100vh;
 	background-attachment: fixed;
 	max-width: 100vw;
-	overflow: scroll;
-	overflow-x: hidden;
 }
 
 body {
 	color: #141414;
 	font-family: sans-serif;
 	width: calc(100vw - 17px);
+	overflow-x: hidden;
 }
 
 p {
@@ -566,9 +565,8 @@ footer > p	{
 	::-webkit-scrollbar { 
 		display: none; 
 	}
-	html {
-		overflow: scroll;
-		overflow-x: hidden;
+	body {
+		width: 100vw;
 	}
 	navbar {
 		width: 100vw;
