@@ -373,6 +373,12 @@ footer > p	{
 	text-align: center;
 }
 
+@media screen and (max-width: 500px) {
+	footer  > .links {
+		margin-bottom: 1em;
+	}
+}
+
 /* Logo Animation */
 
 #logo-anim {
