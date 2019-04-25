@@ -513,7 +513,7 @@ footer > p	{
 
 @keyframes sunrise	{
 	100%	{
-		bottom: -10%;
+		bottom: calc(-10% + 100px);
 	}
 }
 
@@ -543,7 +543,7 @@ footer > p	{
 
 @keyframes logoshrink	{
 	0% {
-		bottom: -10%;
+		bottom: calc(-10% + 100px);
 	}
 	99% {
 		z-index: 2;
