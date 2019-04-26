@@ -47,9 +47,12 @@ let currimg = 0;
 
 $("#gallery a").click(function(e) {
     e.preventDefault();
+    let position = window.scrollY;
     let c = e.currentTarget.classList[0][1];
     $(`#work-detail-${c}`).addClass("visible");
+    $(`#work-detail-${c}`).css("top", position);
     $("#site-wrapper").toggleClass("hidden");
+    $("#logo").toggleClass("hidden");
     $("html").toggleClass("empty-bkg");
 })
 
@@ -58,6 +61,7 @@ $(".close").click(function(e) {
     let overlay = e.currentTarget.parentElement.getAttribute("id");
     $(`#${overlay}`).removeClass("visible");
     $("#site-wrapper").toggleClass("hidden");
+    $("#logo").toggleClass("hidden");
     $("html").toggleClass("empty-bkg");
 })
 

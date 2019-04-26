@@ -506,6 +506,10 @@ footer > p	{
 	fill:#FFFFFF;
 }
 
+#logo.hidden {
+	opacity: 0;
+}
+
 
 /* Animations */
 
