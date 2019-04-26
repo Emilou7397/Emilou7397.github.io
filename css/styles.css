@@ -11,6 +11,14 @@ html {
 	overflow: hidden;
 }
 
+html.empty-bkg {
+	background-image: url("");
+}
+
+#site-wrapper.hidden {
+	opacity: 0;
+}
+
 @keyframes scrollunlock {
 	100% {
 		overflow: auto;
@@ -20,7 +28,7 @@ html {
 body {
 	color: #141414;
 	font-family: sans-serif;
-	width: calc(100vw - 17px);
+	width: 100vw;
 }
 
 navbar, #gallery, #about-contact, footer {
@@ -56,7 +64,7 @@ navbar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: calc(80vw - 17px);
+	width: 80vw;
 	height: 300px;
 	padding: 100px 5vw 50px 5vw;
 	margin: 50px auto 0 auto;
@@ -72,7 +80,7 @@ navbar {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: calc(80vw - 17px);
+	width: 80vw;
 	margin: 50px auto;
 	padding: 50px 5vw 35px 5vw;
 	background-color: #fff;
@@ -141,9 +149,8 @@ a > img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	width: calc(100vw - 17px);
-	padding-left: 9.4vw;
+	min-height: 100vh;
+	width: 100vw;
 	background-color: #fff;
 	display: flex;
 	align-items: center;
@@ -153,14 +160,13 @@ a > img {
 }
 
 .info {
-	width: 35vw;
+	width: 45vw;
 	margin-left: 5vw;
 }
 
 .work-detail.visible {
 	opacity: 1;
 	z-index: 2;
-	position: sticky;
 }
 
 .image > img {
@@ -523,7 +529,7 @@ footer > p	{
 
 @keyframes sunrise	{
 	100%	{
-		bottom: calc(-10vh + 100px);
+		bottom: calc(-10vh + 75px);
 	}
 }
 
@@ -553,13 +559,13 @@ footer > p	{
 
 @keyframes bgshrink {
 	100% {
-		height: 36vh;
+		height: 40vh;
 	}
 }
 
 @keyframes logoshrink	{
 	0% {
-		bottom: calc(-10vh + 100px);
+		bottom: calc(-10vh + 75px);
 	}
 	99% {
 		z-index: 2;
@@ -567,7 +573,7 @@ footer > p	{
 	100%	{
 		width: 400px;
 		left: calc(50vw - 200px);
-		bottom: calc(-10vh + 100px);
+		bottom: -165px;
 		z-index: 0;
 	}
 }

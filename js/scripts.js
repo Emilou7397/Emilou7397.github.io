@@ -49,12 +49,16 @@ $("#gallery a").click(function(e) {
     e.preventDefault();
     let c = e.currentTarget.classList[0][1];
     $(`#work-detail-${c}`).addClass("visible");
+    $("#site-wrapper").toggleClass("hidden");
+    $("html").toggleClass("empty-bkg");
 })
 
 $(".close").click(function(e) {
     e.preventDefault();
     let overlay = e.currentTarget.parentElement.getAttribute("id");
     $(`#${overlay}`).removeClass("visible");
+    $("#site-wrapper").toggleClass("hidden");
+    $("html").toggleClass("empty-bkg");
 })
 
 $(".multi-img").children("svg").click(function(e) {
