@@ -1,0 +1,262 @@
+// BEHAVIOR
+
+// Make stuff
+function Main() {
+	return (
+		<main>
+			<Header />
+			<Gallery />
+			<About />
+			<Contact />
+		</main>
+	);
+}
+
+function Header() {
+	return (
+		<header>
+			<img src="https://picsum.photos/120/60" alt="header image" alt="logo" />
+
+			<a class="work" href="">
+				Work
+			</a>
+			<a class="about" href="">
+				About
+			</a>
+			<a class="contact" href="">
+				Contact
+			</a>
+
+			<a class="github" href="https://github.com/Emilou7397" target="_blank">
+				<img
+					src="https://github.com/Emilou7397/portfolio-redesign/blob/master/img/github.png?raw=true"
+					alt=""
+				/>
+			</a>
+			<a class="codepen" href="https://codepen.io/econe/" target="_blank">
+				<img
+					src="https://github.com/Emilou7397/portfolio-redesign/blob/master/img/codepen.png?raw=true"
+					alt=""
+				/>
+			</a>
+			<a class="instagram" href="https://www.instagram.com/weird.by.design/" target="_blank">
+				<img
+					src="https://github.com/Emilou7397/portfolio-redesign/blob/master/img/instagram.png?raw=true"
+					alt=""
+				/>
+			</a>
+		</header>
+	);
+}
+
+function Gallery() {
+	return (
+		<section id="gallery">
+			<a id="work1" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/200/200" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+			<a id="work2" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/200/400" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+			<a id="work3" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/200/" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+			<a id="work4" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/200" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+			<a id="work5" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/200/400/" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+			<a id="work6" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/400/200" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+			<a id="work7" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/400/200/" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+			<a id="work8" class="work" href="workdetail.html">
+				<img src="https://picsum.photos/200/200/" alt="" />
+				<div class="overlay">
+					<h2>Work Name</h2>
+				</div>
+			</a>
+		</section>
+	);
+}
+
+function About() {
+	return (
+		<section id="about">
+			<h1>About Me</h1>
+			<p>Hello! I'm Emily: a girl with an eclectic collection of interests.</p>
+
+			<p>
+				For my first two years of college, I was a computer science major who
+				thought she wanted to be a game developer. I was minoring in 3D animation
+				and game design. It wasn't until junior year that I took a design course and
+				changed my major three weeks into the quarter. Now, I look back and wonder
+				how I ever didn't know I was a designer.
+			</p>
+
+			<p>
+				So here I am, a designer with a bit of programmer in her. I also still have
+				some of that love for games, but I've realized that the part of game
+				development I actually wanted to do all along was the animation and design.
+				That being said, my favorite projects are interactive SVG animations using
+				HTML, CSS, and JavaScript.
+			</p>
+
+			<p>
+				I also enjoy illustration now that I've found my style and gotten
+				comfortable with Procreate. You can see more examples of my illustration
+				work on Instagram.
+			</p>
+
+			<p>
+				Oh, and as for my "eclectic collection of interests," I'm a fan of retro
+				fashion, I collect teapots, and if you ask me about my cats, I'll talk about
+				them forever.
+			</p>
+
+			<p>
+				You can view my resume{" "}
+				<a href="files/emily-cone_hire-me.pdf" target="_blank">
+					here.
+				</a>
+			</p>
+		</section>
+	);
+}
+
+function Contact() {
+	return (
+		<section id="contact">
+			<section class="top">
+				<h1>Contact</h1>
+				<p>
+					Interested in hiring me? Need freelance work done? Just have a question?
+					Fill out the form and I'll get back to you, or use my contact info on the
+					right.
+				</p>
+			</section>
+
+			<form
+				class="left"
+				action="https://formspree.io/emily.cone@weird-by.design"
+				method="POST"
+			>
+				<section class="field name">
+					<label for="name">
+						<h2>Name</h2>
+					</label>
+					<input type="text" name="name" />
+				</section>
+
+				<section class="field email">
+					<label for="_replyto">
+						<h2>Email</h2>
+					</label>
+					<input type="email" name="_replyto" />
+				</section>
+
+				<section class="field message">
+					<label for="comments">
+						<h2>Message</h2>
+					</label>
+					<textarea name="comments" id="" cols="30" rows="10" />
+				</section>
+
+				<div class="button-wrapper">
+					<input type="submit" value="Submit" />
+				</div>
+
+				<input type="hidden" name="_next" value="/" />
+			</form>
+
+			<section class="right">
+				<h2>Phone</h2>
+				<p>
+					Due to spam calls, I often screen unfamiliar numbers. If I don't answer, please leave a message!
+				</p>
+				<p>208.790.1552</p>
+				<h2>Email</h2>
+				<p>emily.cone@weird-by.design</p>
+				<p>emily.cone.work@gmail.com</p>
+				<h2>Social Media</h2>
+				<a class="github" href="https://github.com/Emilou7397" target="_blank">
+				<img
+					src="https://github.com/Emilou7397/portfolio-redesign/blob/master/img/github.png?raw=true"
+					alt=""
+				/>
+			</a>
+			<a class="codepen" href="https://codepen.io/econe/" target="_blank">
+				<img
+					src="https://github.com/Emilou7397/portfolio-redesign/blob/master/img/codepen.png?raw=true"
+					alt=""
+				/>
+			</a>
+			<a class="instagram" href="https://www.instagram.com/weird.by.design/" target="_blank">
+				<img
+					src="https://github.com/Emilou7397/portfolio-redesign/blob/master/img/instagram.png?raw=true"
+					alt=""
+				/>
+			</a>
+			</section>
+		</section>
+	);
+}
+
+function Footer() {
+	return <footer />;
+}
+
+// Show stuff
+ReactDOM.render( <Main /> , document.getElementById('main') );
+
+// Behavior
+$(".close").click(function(e) {
+	e.preventDefault();
+	// Close the detail page
+});
+
+$(".work > .overlay").hover(function(e) {
+	let target = e.target.classList.toggle("overlayhover");
+});
+
+$("header > .work").click(function(e) {
+	e.preventDefault();
+	var elmnt = document.getElementById("gallery");
+	elmnt.scrollIntoView();
+})
+
+$("header > .about").click(function(e) {
+	e.preventDefault();
+	var elmnt = document.getElementById("about");
+	elmnt.scrollIntoView();
+})
+
+$("header > .contact").click(function(e) {
+	e.preventDefault();
+	var elmnt = document.getElementById("contact");
+	elmnt.scrollIntoView();
+})
