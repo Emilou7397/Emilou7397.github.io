@@ -31,17 +31,17 @@ function Header() {
 
     React.createElement("a", { class: "github", href: "https://github.com/Emilou7397", target: "_blank" },
     React.createElement("img", {
-      src: "https://github.com/Emilou7397/portfolio-redesign/blob/master/img/github.png?raw=true",
+      src: "img/github.png",
       alt: "" })),
 
     React.createElement("a", { class: "codepen", href: "https://codepen.io/econe/", target: "_blank" },
     React.createElement("img", {
-      src: "https://github.com/Emilou7397/portfolio-redesign/blob/master/img/codepen.png?raw=true",
+      src: "img/codepen.png",
       alt: "" })),
 
     React.createElement("a", { class: "instagram", href: "https://www.instagram.com/weird.by.design/", target: "_blank" },
     React.createElement("img", {
-      src: "https://github.com/Emilou7397/portfolio-redesign/blob/master/img/instagram.png?raw=true",
+      src: "img/instagram.png",
       alt: "" }))));
 }
 
