@@ -173,17 +173,17 @@ function Contact() {
     React.createElement("h2", null, "Social Media"),
     React.createElement("a", { class: "github", href: "https://github.com/Emilou7397", target: "_blank" },
     React.createElement("img", {
-      src: "https://github.com/Emilou7397/portfolio-redesign/blob/master/img/github.png?raw=true",
+      src: "https://github.com/Emilou7397/Emilou7397.github.io/blob/master/img/github.png?raw=true",
       alt: "" })),
 
     React.createElement("a", { class: "codepen", href: "https://codepen.io/econe/", target: "_blank" },
     React.createElement("img", {
-      src: "https://github.com/Emilou7397/portfolio-redesign/blob/master/img/codepen.png?raw=true",
+      src: "https://github.com/Emilou7397/Emilou7397.github.io/blob/master/img/codepen.png?raw=true",
       alt: "" })),
 
     React.createElement("a", { class: "instagram", href: "https://www.instagram.com/weird.by.design/", target: "_blank" },
     React.createElement("img", {
-      src: "https://github.com/Emilou7397/portfolio-redesign/blob/master/img/instagram.png?raw=true",
+      src: "https://github.com/Emilou7397/Emilou7397.github.io/blob/master/img/instagram.png?raw=true",
       alt: "" })))));
 }
 
