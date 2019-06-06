@@ -1,7 +1,7 @@
 // BEHAVIOR
 
 // Fetch stuff
-const getStuff = 'https://gist.githubusercontent.com/Emilou7397/e7e8eb9e8cde7752c366750c0d9c547d/raw/c9ca493ea7531f36a56bf31bfdc568c835ccce8a/portfolio.json';
+const getStuff = 'https://gist.githubusercontent.com/Emilou7397/e7e8eb9e8cde7752c366750c0d9c547d/raw/ad5f8245f3bb1b8f8905f12f3936e1e44063ac1c/portfolio.json';
 let image, name, tagline, summary, who, what, when, where, why, how;
 let dataVar;
 let i = window.location.hash.substring(1);
