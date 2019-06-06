@@ -127,14 +127,17 @@ line.inactive {
 
 .github {
 	grid-column: 6 / 7;
+	text-align: right;
 }
 
 .codepen {
 	grid-column: 7 / 8;
+	text-align: center;
 }
 
 .instagram {
 	grid-column: 8 / 9;
+	text-align: left;
 }
 
 header > a, header > a:visited {
