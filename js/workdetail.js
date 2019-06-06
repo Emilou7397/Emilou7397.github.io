@@ -24,7 +24,7 @@ let assign = function(dataVar) {
   let template1 = `<section id="workdetail">
   <a href="index.html">
     <img
-      src="https://github.com/Emilou7397/portfolio-redesign/blob/master/img/close.png?raw=true"
+      src="https://github.com/Emilou7397/Emilou7397.github.io/blob/master/img/close.png?raw=true"
       alt="close"
     />
   </a>`
