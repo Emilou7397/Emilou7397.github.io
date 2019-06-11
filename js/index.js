@@ -48,49 +48,49 @@ function Header() {
 function Gallery() {
   return (
     React.createElement("section", { id: "gallery" },
-    React.createElement("a", { id: "work1", class: "work", href: "workdetail.html#!0" },
+    React.createElement("a", { id: "work1", class: "work", href: "workdetail.html#0" },
     React.createElement("img", { src: "img/google-doodle-thumbnail.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "Google Doodle"))),
 
 
-    React.createElement("a", { id: "work2", class: "work", href: "workdetail.html#!1" },
+    React.createElement("a", { id: "work2", class: "work", href: "workdetail.html#1" },
     React.createElement("img", { src: "img/poster-thumbnail.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "Circus Poster"))),
 
 
-    React.createElement("a", { id: "work3", class: "work", href: "workdetail.html#!2" },
+    React.createElement("a", { id: "work3", class: "work", href: "workdetail.html#2" },
     React.createElement("img", { src: "img/bee-mockup1.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "Benson's Ethical Eats"))),
 
 
-    React.createElement("a", { id: "work4", class: "work", href: "workdetail.html#!3" },
+    React.createElement("a", { id: "work4", class: "work", href: "workdetail.html#3" },
     React.createElement("img", { src: "img/album-cover-thumbnail.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "Summer of '81"))),
 
 
-    React.createElement("a", { id: "work5", class: "work", href: "workdetail.html#!4" },
+    React.createElement("a", { id: "work5", class: "work", href: "workdetail.html#4" },
     React.createElement("img", { src: "img/spark-thumbnail.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "Spark Central"))),
 
 
-    React.createElement("a", { id: "work6", class: "work", href: "workdetail.html#!5" },
+    React.createElement("a", { id: "work6", class: "work", href: "workdetail.html#5" },
     React.createElement("img", { src: "img/game-thumbnail.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "Browser-based I Spy"))),
 
 
-    React.createElement("a", { id: "work7", class: "work", href: "workdetail.html#!6" },
+    React.createElement("a", { id: "work7", class: "work", href: "workdetail.html#6" },
     React.createElement("img", { src: "img/ny-cover-thumbnail.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "New Yorker Cover"))),
 
 
-    React.createElement("a", { id: "work8", class: "work", href: "workdetail.html#!7" },
+    React.createElement("a", { id: "work8", class: "work", href: "workdetail.html#7" },
     React.createElement("img", { src: "img/voter-drive-thumbnail.png", alt: "" }),
     React.createElement("div", { class: "overlay" },
     React.createElement("h2", null, "EWU 2018 Voting Drive")))));
